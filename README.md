@@ -1,10 +1,10 @@
 如何提取免root提取数据：
 
-正常情况下非root无法获取应用程序数据，但是如何使系统自带的功能本身就具备底层root的权限。因此使用小米的备份改应用数据，会在`/storage/emulated/0/MIUI/backup/AllBackup/`路径下创建一个包含完整的应用及其数据的zip包，该zip解压得到后缀为.bak的数据包，将.bak数据包转换为.zip格式，使用7zip解压会得到一个具有解压后的目录结构。
+正常情况下非root无法获取应用程序数据，但是如何使系统自带的功能本身就具备底层root的权限。因此使用小米的备份改应用数据，会在`/storage/emulated/0/MIUI/backup/AllBackup/`路径下创建一个包含完整的应用及其数据的zip包，该zip解压得到后缀为.bak的数据包，将.bak后缀更改为.zip，使用7zip解压会得到一个具有解压后的目录结构。
 
-数据存储在`com.chuanyuanyi.zkcl/ef/fslegacy/UZMap/A6177338340306/local_questions`，可供参考。
+数据存储在`com.chuanyuanyi.zkcl/ef/fslegacy/UZMap/A6177338340306/local_questions`，可供参考，实际情况可能随机器环境以及版本更新变化。
 
-里面文件均为json格式，部分内容（题库部分，其名字以`tikub_`开头）使用base64编码（掩耳盗铃），使用base64解码后即可得到解析后的题目。
+里面文件均为json格式，部分文件内容（比如名字以`tikub_`开头）使用base64编码（掩耳盗铃），使用base64解码后即可得到解析后的题目。
 
 至此，删减部分非必要内容部分，比如成绩历史、其他的科目，即保留了当前三副理论内容数据。
 
